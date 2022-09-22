@@ -5,3 +5,12 @@
     line-height: 24px;
     letter-spacing: 0.25px;
 }
+
+.float-btn{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    button{
+        background-color: #FF5A70;
+    }
+}
