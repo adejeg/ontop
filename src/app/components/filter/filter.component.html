@@ -1,0 +1,63 @@
+<!-- Search box and buttons -->
+<div class="row mb-4">
+    <div class="col-lg-9 mb-4 mb-lg-0">
+        <div class="form-group search-container">
+            <input type="text" class="form-control search" placeholder="Search" [(ngModel)]="searchData">
+            <img src="assets/img/icons/search.svg" alt="search" class="search-icon">
+        </div>
+    </div>
+    <div class="col-lg-1 col-5 d-grid">
+        <button class="btn secondary-btn py-3">
+            <img src="assets/img/icons/tune.svg" alt="filter" class="me-2"> Filter
+        </button>
+    </div>
+    <div class="col-lg-2 col-7 d-grid">
+        <button class="btn primary-btn py-3">
+            <img src="assets/img/icons/plus.svg" alt="filter" class="me-2"> New Hire
+        </button>
+    </div>
+</div>
+
+<!-- New Hire form -->
+<form [formGroup]="form">
+    <div class="row mb-4 new-contractor">
+        <div class="col-lg-4 col-8 offset-2 offset-lg-0 mb-4">
+            <div class="form-group date-container">
+                <select name="date" id="" formControlName="date" name="date" class="form-select py-3 shadow date-selector">
+                    <option [value]="e" *ngFor="let e of date">Created On: {{e}}</option>
+                </select>
+                <img src="assets/img/icons/date.svg" alt="date" class="date-icon">
+            </div>
+        </div> 
+        <div class="col-lg-2 col-8 offset-2 offset-lg-0 mb-4">
+            <div class="form-group">
+                <select name="contract_type" formControlName="contract_type" id="" class="form-select py-3 shadow">
+                    <option selected disabled [value]="null">Contract Type</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-8 offset-2 offset-lg-0 mb-4">
+            <div class="form-group">
+                <input type="text" name="name" formControlName="name" class="form-control py-3 shadow" placeholder="Contractor Name">
+            </div>
+        </div>
+        <div class="col-lg-2 col-8 offset-2 offset-lg-0 mb-4">
+            <div class="form-group">
+                <select name="status" formControlName="status" id="" class="form-select py-3 shadow">
+                    <option selected disabled [value]="null">Status</option>
+                    <option value="Not Started">Not Started</option>
+                    <option value="Ongoing">Ongoing</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Abandoned">Abandoned</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-2 col-8 offset-2 offset-lg-0 mb-4 d-block d-lg-none">
+            <div class="form-group text-end h5 primary-text">
+                <span class="cursor" (click)="form.reset()"><img src="assets/img/icons/trash.svg" alt=""> Clear filters</span>
+            </div>
+        </div>
+    </div>
+</form>

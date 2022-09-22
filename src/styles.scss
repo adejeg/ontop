@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap';
+@import url("https://use.typekit.net/dkt1zdr.css");
+
+:root{
+    --font-color: #3B3B3B;
+    --font-color-darker: #000000;
+    --font-color-lighter: #898989;
+    font-size: 14px;
+}
+body, html{
+    font-family: aileron,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--font-color);
+}
+
+.wrapper{
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: aileron,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--font-color-darker);
+}
+
+.shadow{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.radius{
+    border-radius: 5px;
+}
+
+.radius-20{
+    border-radius: 20px;
+}
+
+.profile-img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 2.9rem;
+    width: 2.9rem;
+}
+
+
+.success-bg{
+    color: #36CF82;
+    background-color: #36CF822E;
+}
+
+.amber-bg{
+    color: #F29D42;
+    background-color: #F29D424D;
+}
+
+.light-bg{
+    background-color: #F9F9F9;
+}
+
+.primary-text{
+    color: #FF5A70;
+}
+.primary-btn{
+    background-color: #FF5A70;
+    color: #ffffff;
+    &:hover{
+        background-color: #FF5A70 !important;
+        color: #ffffff !important;
+    }
+}
+
+.secondary-btn{
+    background: #EBEBEB;
+    color: var(--font-color-darker);
+    &:hover{
+        background: #EBEBEB !important;
+        color: var(--font-color-darker) !important;
+    }
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+button, .navbar-toggler, .form-control, .form-select{
+    &:focus{
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+.form-control, .form-select{
+    color: var(--font-color-lighter);
+}
+
+// HTTP request spinner
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    
+    div {
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        width: 16px;
+        background: #fff;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+        
+        &:nth-child(1) {
+          left: 8px;
+          animation-delay: -0.24s;
+        }
+        &:nth-child(2) {
+          left: 32px;
+          animation-delay: -0.12s;
+        }
+        &:nth-child(3) {
+          left: 56px;
+          animation-delay: 0;
+        }
+    }
+}
+
+@keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+}

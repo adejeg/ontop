@@ -1,0 +1,60 @@
+<div class="shadow radius p-3 mb-4 bg-white">
+    <ul class="list-unstyled container-fluid mb-0">
+        <li class="row py-2">
+            <div class="col-6">
+                <p class="mb-0 h6">Contractor name</p>
+            </div>
+            <div class="col-6">
+                <p class="mb-0">{{contractor?.name}}</p>
+            </div>
+        </li>
+        <li class="row py-2">
+            <div class="col-6">
+                <p class="mb-0 h6">Type</p>
+            </div>
+            <div class="col-6">
+                <p class="mb-0">{{contractor?.type}}</p>
+            </div>
+        </li>
+        <li class="row py-2">
+            <div class="col-6">
+                <p class="mb-0 h6">Start Date</p>
+            </div>
+            <div class="col-6">
+                <p class="mb-0">{{contractor?.start_date}}</p>
+            </div>
+        </li>
+        <li class="row py-2">
+            <div class="col-6">
+                <p class="mb-0 h6">Amount</p>
+            </div>
+            <div class="col-6">
+                <p class="mb-0">{{contractor?.amount}}</p>
+            </div>
+        </li>
+        <li class="row py-2">
+            <div class="col-6">
+                <p class="mb-0 h6">Status</p>
+            </div>
+            <div class="col-6">
+                <p class="mb-0">{{contractor?.status}}</p>
+            </div>
+        </li>
+        <li class="row py-2">
+            <div class="col-6">
+                <p class="mb-0 h6">Actions</p>
+            </div>
+            <div class="col-6 ps-4">
+                <div class="dropdown-center">
+                    <img src="assets/img/icons/ellipse.svg" class="dropdown-toggle cursor rotate" data-bs-toggle="dropdown" aria-expanded="false" alt="">
+                    <ul class="dropdown-menu shadow">
+                        <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/edit.svg" alt="delete" class="me-2"> Edit</a></li>
+                        <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/signature.svg" alt="delete" class="me-2"> Sign</a></li>
+                        <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/document.svg" alt="delete" class="me-2"> View Summary</a></li>
+                        <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/trash.svg" alt="delete" class="me-2"> Delete</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

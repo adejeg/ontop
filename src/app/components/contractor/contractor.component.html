@@ -1,0 +1,28 @@
+
+<div class="row my-4 light-bg py-4">
+    <div class="col-3">
+        <div>
+            <img [src]="contractor?.picture" [attr.alt]="contractor?.name" class="me-3"> {{contractor?.name}}
+        </div>
+    </div>
+    <div class="col-2 d-flex align-items-center">{{contractor?.type}}</div>
+    <div class="col-2 d-flex align-items-center">{{contractor?.start_date}}</div>
+    <div class="col-2 d-flex align-items-center">{{contractor?.amount | currency:'USD':'code'}}</div>
+    <div class="col-2 d-flex align-items-center">
+        <small class="w-100 radius-20 px-3 py-1" [ngClass]="{'success-bg': contractor?.status == 'Active', 'amber-bg': contractor?.status != 'Active'}">
+            <span class="dot me-2" [ngClass]="{'green': contractor?.status == 'Active', 'orange': contractor?.status != 'Active'}"></span>
+            {{contractor?.status}}
+        </small>
+    </div>
+    <div class="col-1 d-flex align-items-center justify-content-center">
+        <div class="dropdown-center">
+            <img src="assets/img/icons/ellipse.svg" class="dropdown-toggle cursor" data-bs-toggle="dropdown" aria-expanded="false" alt="">
+            <ul class="dropdown-menu shadow">
+                <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/edit.svg" alt="delete" class="me-2"> Edit</a></li>
+                <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/signature.svg" alt="delete" class="me-2"> Sign</a></li>
+                <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/document.svg" alt="delete" class="me-2"> View Summary</a></li>
+                <li class="px-2"><a class="dropdown-item py-2" href="#"><img src="assets/img/icons/trash.svg" alt="delete" class="me-2"> Delete</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

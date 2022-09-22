@@ -1,0 +1,32 @@
+.search-container{
+    position: relative;
+    .search{
+        padding: 17px 50px;
+    }
+
+    .search-icon{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.new-contractor{
+    input, select{
+        border: none;
+    }
+
+    .date-container{
+        position: relative;
+        
+        .date-selector{
+            padding-left: 38px;
+        }
+
+        .date-icon{
+            position: absolute;
+            top: 16px;
+            left: 10px;
+        }
+    }
+}

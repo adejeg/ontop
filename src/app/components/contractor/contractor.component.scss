@@ -1,0 +1,30 @@
+.dot{
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.green{
+    background-color: #36CF82;
+}
+
+.orange{
+    background-color: #F29D42;
+}
+
+.dropdown-menu{
+    border: none;
+
+    .dropdown-item{
+        border-bottom: 1px solid #EBEBEB;
+    }
+
+    li:last-child{
+        .dropdown-item{
+            border-bottom: none;
+        }
+    }
+}
